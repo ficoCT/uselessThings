@@ -1,9 +1,13 @@
+import {Outlet, Link, Route} from "react-router-dom";
 
 function App() {
   return (
-    <div >
-    Działa :)
-    </div>
+      <>
+        <nav>
+          <Link to="/">Strona główna</Link>
+        </nav>
+        <Outlet />
+      </>
   );
 }
 
