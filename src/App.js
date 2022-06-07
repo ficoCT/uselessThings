@@ -1,13 +1,20 @@
-import {Outlet, Link, Route} from "react-router-dom";
+import React from 'react';
+import { Route, BrowserRouter, Routes } from "react-router-dom";
+import Home from "./components/Home";
+import Login from "./components/Login";
+import Register from "./components/Register";
 
 function App() {
   return (
-      <>
-        <nav>
-          <Link to="/">Strona główna</Link>
-        </nav>
-        <Outlet />
-      </>
+          <React.StrictMode>
+              <BrowserRouter>
+                  <Routes>
+                      <Route path="/" element={<Home />} />
+                      <Route path="login" element={<Login />} />
+                      <Route path="register" element={<Register />} />
+                  </Routes>
+              </BrowserRouter>
+          </React.StrictMode>
   );
 }
 
