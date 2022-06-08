@@ -3,12 +3,13 @@ import WhatIsItAbout from "./WhatIsItAbout";
 import AboutUs from "./AboutUs";
 import FoundationAndOrganizations from "./FoundationAndOrganizations";
 import Contact from "./Contact";
+import HomeThreeColumns from "./HomeThreeColumns";
 
 function Home() {
   return (
     <>
       <HomeHeader />  < br/>
-      {/*<HomeThreeColumns />  < br/>*/}
+      <HomeThreeColumns />  < br/>
       <WhatIsItAbout />  < br/>
       <AboutUs />  < br/>
       <FoundationAndOrganizations />  < br/>
