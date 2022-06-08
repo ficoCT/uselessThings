@@ -1,6 +1,12 @@
+import HomeImage from "./HomeImage";
+import HomeHeaderNavbar from "./HomeHeaderNavbar";
+
 function HomeHeader() {
   return (
-    <> HomeHeader </>
+   <div className="homeHeader">
+       <HomeImage />
+       <HomeHeaderNavbar />
+   </div>
   );
 }
 

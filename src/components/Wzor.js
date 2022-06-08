@@ -1,4 +1,4 @@
-function Start() {
+function Wzor() {
   return (
     <div id="start" style={{height:'250px'}}>
         Start
@@ -7,4 +7,4 @@ function Start() {
   );
 }
 
-export default Start;
+export default Wzor;
