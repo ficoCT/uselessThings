@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { ReactComponent as SVGDecoration } from '.././assets/decoration.svg';
 
 function Action() {
 

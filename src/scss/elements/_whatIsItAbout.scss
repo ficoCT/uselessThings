@@ -1,0 +1,62 @@
+.whatIsItAbout {
+
+    &__container__columns {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    &__header {
+        text-align: center;
+        font-size: 35px;
+        margin-bottom: 30px;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: row;
+        background-color: #737373;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    &__container__row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &__single {
+        max-width: 300px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    &__icon {
+        width: 90px;
+        height: 90px;
+        margin-bottom: 15px;
+    }
+
+    &__description::before {
+        content:'';
+        position:relative;
+        display:block;
+        top:-10%;
+        left: 25%;
+        height:1px;
+        width: 60px;
+        background:$color-dark-grey;
+    }
+
+    &__description {
+        font-size: 14px;
+        margin-top: 8px;
+    }
+
+    &__links {
+        text-align: center;
+    }
+}
+
