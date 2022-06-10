@@ -1,4 +1,4 @@
-import {ReactComponent as SVGDecoration} from "../assets/decoration.svg";
+import {ReactComponent as SVGDecoration} from "../assets/Decoration.svg";
 
 function HomeText() {
   return (

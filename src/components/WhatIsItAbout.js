@@ -1,5 +1,5 @@
 import {Link} from "react-router-dom";
-import {ReactComponent as SVGDecoration} from "../assets/decoration.svg";
+import {ReactComponent as SVGDecoration} from "../assets/Decoration.svg";
 import Icon1 from "../assets/Icon-1.svg";
 import Icon2 from "../assets/Icon-2.svg";
 import Icon3 from "../assets/Icon-3.svg";

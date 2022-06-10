@@ -1,8 +1,14 @@
+import AboutUsImage from "./AboutUsImage";
+import AboutUsText from "./AboutUsText";
+
 function AboutUs() {
   return (
-    <div id="aboutUs" style={{height:'250px'}}>
-        AboutUs
-    </div>
+    <section id="aboutUs">
+        <div className="aboutUs__container">
+            <AboutUsText />
+            <AboutUsImage />
+        </div>
+    </section>
 
   );
 }
