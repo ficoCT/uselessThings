@@ -1,5 +1,4 @@
 import {ReactComponent as SVGDecoration} from "../assets/Decoration.svg";
-import {ReactComponent as SVGSignature} from "../assets/Signature.svg";
 import Signature from "../assets/Signature.svg";
 
 function AboutUsText() {
