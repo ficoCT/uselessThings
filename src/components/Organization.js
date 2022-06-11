@@ -2,9 +2,8 @@ function Organization() {
   return (
     <>
         <p className="statistics__description">
-            W naszej bazie znajdziesz listę zweryfikowanych Fundacji, z
-            którymi współpracujemy. Możesz sprawdzić czym się zajmują,
-            komu pomagają i czego potrzebują.
+            Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut
+            labore et dolore magna aliqua.
         </p>
     </>
 

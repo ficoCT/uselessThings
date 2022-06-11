@@ -1,6 +1,10 @@
 import OrganizationalUnit from "./OrganizationalUnit";
+import fundationsList  from "../database/fundations.js";
 
 function Foundation() {
+
+  console.log("fundationsList", fundationsList);
+
   return (
     <>
         <p className="statistics__description">
@@ -8,9 +12,10 @@ function Foundation() {
             którymi współpracujemy. Możesz sprawdzić czym się zajmują,
             komu pomagają i czego potrzebują.
         </p>
-        <OrganizationalUnit/>
+        {fundationsList.map(fundation => (
+            fundation.name
+        ))}
     </>
-
   );
 }
 
