@@ -27,30 +27,30 @@ function FoundationAndOrganizations() {
         <h1>Komu pomagamy?</h1>
         <SVGDecoration className="homeTextSVGDecoration"/>
         <div className="foundationAndOrganizations__links">
-            <span
+            <div
                 className="foundationAndOrganizations__links__single"
                 onMouseOver={handleMouseOver}
                 onMouseOut={handleMouseOut}
                 onClick={() => handleSpanClick(0)}
             >
                 Fundacjom
-            </span>
-            <span
+            </div>
+            <div
                 className="foundationAndOrganizations__links__single"
                 onMouseOver={handleMouseOver}
                 onMouseOut={handleMouseOut}
                 onClick={() => handleSpanClick(1)}
             >
-                Organizacjom pozarządowym
-            </span>
-            <span
+                Organizacjom <br/> pozarządowym
+            </div>
+            <div
                 className="foundationAndOrganizations__links__single"
                 onMouseOver={handleMouseOver}
                 onMouseOut={handleMouseOut}
                 onClick={() => handleSpanClick(2)}
             >
-                Lokalnym zbiórkom
-            </span>
+                Lokalnym <br/> zbiórkom
+            </div>
         </div>
         {TaOtab[id]}
     </div>

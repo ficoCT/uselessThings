@@ -1,17 +1,19 @@
 function OrganizationalUnit({unit}) {
 
   return (
-    <div className="foundations__single container">
-         <div className="foundations__single__unit__single__unit">
-             <div className="foundations__single__unit__name">
-                 {unit.name}
+    <div className="organizationalUnit__single container">
+         <div className="organizationalUnit__single__unit">
+             <div className="organizationalUnit__single__unit__name">
+                 Fundacja: "{unit.name}"
              </div>
-             <div className="foundations__single__unit__description">
-                 {unit.description}
+             <div className="organizationalUnit__single__unit__description">
+                 Cel i misja: {unit.description}
              </div>
          </div>
-        <div className="foundations____single__things">
-            {unit.things}
+        <div className="organizationalUnit__single__things">
+            <p className="organizationalUnit__single__things__text">
+                {unit.things}
+            </p>
         </div>
     </div>
   );
