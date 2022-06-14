@@ -1,13 +1,13 @@
-function OrganizationalUnit({unit}) {
+function OrganizationalUnit({unitName, unitTarget, unit}) {
 
   return (
     <div className="organizationalUnit__single container">
          <div className="organizationalUnit__single__unit">
              <div className="organizationalUnit__single__unit__name">
-                 Fundacja: "{unit.name}"
+                 {unitName} {" "} "{unit.name}"
              </div>
              <div className="organizationalUnit__single__unit__description">
-                 Cel i misja: {unit.description}
+                 {unitTarget} {" "} {unit.description}
              </div>
          </div>
         <div className="organizationalUnit__single__things">

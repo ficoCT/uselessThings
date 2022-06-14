@@ -1,4 +1,4 @@
-let organizationsList = [
+let locallyList = [
     {
         "id": 1,
         "name": "Lorem Ipsum 1",
@@ -37,4 +37,4 @@ let organizationsList = [
     }
 ];
 
-export default organizationsList;
+export default locallyList;

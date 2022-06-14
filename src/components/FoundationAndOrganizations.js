@@ -23,7 +23,7 @@ function FoundationAndOrganizations() {
   }
 
   return (
-    <div id="foundationAndOrganizations container">
+    <div id="foundationAndOrganizations">
         <h1>Komu pomagamy?</h1>
         <SVGDecoration className="homeTextSVGDecoration"/>
         <div className="foundationAndOrganizations__links">

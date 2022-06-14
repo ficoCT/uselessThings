@@ -23,7 +23,7 @@ function Foundation() {
             komu pomagają i czego potrzebują.
         </p>
         {currentFoundations.map(foundation => (
-            <OrganizationalUnit key={foundation.id} unit={foundation}/>
+            <OrganizationalUnit key={foundation.id} unitName={"Fundacja"} unitTarget={"Cel i misja:"} unit={foundation}/>
         ))}
         <Pagination
             foundationsPerPage={foundationsPerPage}
