@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Links from "./Links";
 import {validateRegister} from "../validateRegister";
 import {useState} from "react";
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
 function Register() {
     const [values, setValues] = useState({email: "", password: "", password1: ""});
@@ -21,6 +22,19 @@ function Register() {
     const handleSubmit = (e) => {
         e.preventDefault();
         setErrorMessages(validateRegister(values));
+
+        if (errorMessages) return;
+
+        const auth = getAuth();
+        createUserWithEmailAndPassword(auth, values.email, values.password)
+            .then((userCredential) => {
+                // Signed in
+                const user = userCredential.user;
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+            });
     };
 
     const handleChange = (e) => {
