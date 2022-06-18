@@ -2,8 +2,13 @@ import { ReactComponent as SVGDecoration } from "../assets/Decoration.svg";
 import { Input } from "./Input";
 import { Link } from "react-router-dom";
 import Links from "./Links";
+import { validateLogin } from '../validateLogin';
+import {validateMessage} from "../validateMessage";
+import {useState} from "react";
 
 function Login() {
+  const [values, setValues] = useState({email: "", password: ""});
+  const [errorMessages, setErrorMessages] = useState(null);
 
   function handleMouseOver(e) {
       e.target.style.border = "2px solid #737373";
@@ -13,6 +18,19 @@ function Login() {
   function handleMouseOut(e) {
       e.target.style.border = "2px solid transparent";
   }
+
+  const handleSubmit = (e) => {
+      e.preventDefault();
+      setErrorMessages(validateLogin(values));
+  };
+
+  const handleChange = (e) => {
+      const { name, value } = e.target;
+      setValues(prevValues => ({
+          ...prevValues,
+          [name]: value,
+      }));
+  };
 
   return (
     <div className="login container">
@@ -28,11 +46,17 @@ function Login() {
               label="Email"
               name="email"
               type="email"
+              value={values.email}
+              errorMessage={errorMessages?.email}
+              onChange={handleChange}
           />
           <Input
               label="Hasło"
               name="password"
               type="password"
+              value={values.password}
+              errorMessage={errorMessages?.password}
+              onChange={handleChange}
           />
       </div>
       <div className="login__account">
@@ -47,6 +71,7 @@ function Login() {
               className="login__account__login"
               onMouseOver={handleMouseOver}
               onMouseOut={handleMouseOut}
+              onClick={handleSubmit}
           >
               Zaloguj się
           </div>

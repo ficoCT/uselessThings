@@ -1,14 +1,14 @@
-export function validate(values) {
+export function validateMessage(values) {
   const errorMessages = {};
 
-  errorMessages.username = "";
+  errorMessages.name = "";
   errorMessages.email = "";
-  errorMessages.textarea = "";
+  errorMessages.message = "";
 
-  if (values.username.length === 0) {
-    errorMessages.username += 'Pole nie może być puste. ';
-  } else if ("values.username", values.username.includes(' ')) {
-    errorMessages.username += 'Imię powinno być jednym wyrazem. ';
+  if (values.name.length === 0) {
+    errorMessages.name += 'Pole nie może być puste. ';
+  } else if ("values.name", values.name.includes(' ')) {
+    errorMessages.name += 'Imię powinno być jednym wyrazem. ';
   }
 
   if (values.email.length === 0) {
@@ -21,8 +21,8 @@ export function validate(values) {
     errorMessages.email += 'Email nie jest poprawny. ';
   }
 
-  if (values.textarea.length <= 120) {
-    errorMessages.textarea = 'Wiadomość musi mieć conajmniej 120 znaków. ';
+  if (values.message <= 120) {
+    errorMessages.message = 'Wiadomość musi mieć conajmniej 120 znaków. ';
   }
 
   return Object.keys(errorMessages).length > 0

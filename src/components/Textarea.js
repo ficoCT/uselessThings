@@ -13,11 +13,13 @@ export function Textarea({ label, name, placeholder, type, value, errorMessage, 
             <textarea
                 name={name}
                 type={type}
-                placeholder={placeholder}
-                value={value}
+                // placeholder={placeholder}
+                // value={value}
                 onChange={handleChange}
                 className="contact__container__text__form__labels__single__input"
-            />
+            >
+            {value.message}
+            </textarea>
             {errorMessage && <span className="contact__container__text__form__labels__single__error-message">{errorMessage}</span>}
         </label>
     );
