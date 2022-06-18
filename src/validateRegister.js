@@ -14,8 +14,12 @@ export function validateRegister(values) {
     errorMessages.email += 'Podany email jest nieprawidłowy!. ';
   }
 
-  if (values.password.length <= 5) {
+  if (values.password.length === 0) {
+    errorMessages.password = 'Pole nie może być puste. ';
+  } else if (values.password.length <= 5) {
     errorMessages.password = 'Podane hasło jest za krótkie!';
+  } else if (values.password !==  values.password1) {
+    errorMessages.password1 = 'Podane hasła muszą byś takie same!';
   }
 
   return Object.keys(errorMessages).length > 0

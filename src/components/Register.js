@@ -37,7 +37,7 @@ function Register() {
                 <Links />
             </div>
             <span className="login__title">
-          Zaloguj się
+          Załóż konto
       </span>
             <SVGDecoration className="homeTextSVGDecoration"/>
             <div className="login__input">
@@ -60,7 +60,7 @@ function Register() {
                 <Input
                     label="Powtórz hasło"
                     name="password1"
-                    type="password1"
+                    type="password"
                     value={values.password1}
                     errorMessage={errorMessages?.password1}
                     onChange={handleChange}
