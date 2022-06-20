@@ -3,8 +3,8 @@ import { Input } from "./Input";
 import { Link } from "react-router-dom";
 import Links from "./Links";
 import { validateLogin } from '../validateLogin';
-import {validateMessage} from "../validateMessage";
 import {useState} from "react";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
 function Login() {
   const [values, setValues] = useState({email: "", password: ""});
@@ -21,7 +21,21 @@ function Login() {
 
   const handleSubmit = (e) => {
       e.preventDefault();
+
       setErrorMessages(validateLogin(values));
+
+      if (errorMessages) return;
+
+      const auth = getAuth();
+      signInWithEmailAndPassword(auth, values.email, values.password)
+          .then((userCredential) => {
+              // Signed in
+              const user = userCredential.user;
+          })
+          .catch((error) => {
+              const errorCode = error.code;
+              const errorMessage = error.message;
+          });
   };
 
   const handleChange = (e) => {
@@ -77,7 +91,6 @@ function Login() {
           </div>
       </div>
     </div>
-
   );
 }
 
