@@ -15,7 +15,6 @@ function Home() {
       <FoundationAndOrganizations />  < br/>
       <Contact />  < br/>
     </>
-
   );
 }
 

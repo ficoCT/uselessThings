@@ -5,7 +5,7 @@ function LoginLinks({email}) {
   return (
     <div>
         <span>Cześć {email}!</span>
-        <Link className="links" to="/login">Oddaj rzeczy</Link> {' '}
+        <Link className="links" to="/hand-over-things">Oddaj rzeczy</Link> {' '}
         <Link className="links" to="/logout">Wyloguj</Link> {' '}
     </div>
   );

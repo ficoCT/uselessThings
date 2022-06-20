@@ -9,7 +9,7 @@ function HomeHeaderNavbar() {
           <Navbar />
           <HomeText />
           <Action />
-          <Outlet />  < br/>
+          <Outlet />
       </div>
   );
 }
