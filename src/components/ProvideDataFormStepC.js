@@ -1,11 +1,30 @@
 import HandOverThingsImportant from "./HandOverThingsImportant";
 import React from "react";
+import {useState} from "react";
 
-function ProvideDataFormStepC({text, onChangeStep}) {
+function ProvideDataFormStepC({text, fillForm, onChangeStep}) {
+
+    const [locationAndPerson, setLocationAndPerson] = useState({location:"", person:"", organization:""});
+
+    function handleChangePerson(person) {
+        let tempData = {...locationAndPerson};
+        tempData.person = person;
+        setLocationAndPerson(tempData);
+    }
+
+    function handleChange(e) {
+        const { name, value } = e.target;
+        setLocationAndPerson(prevValues => ({
+            ...prevValues,
+            [name]: value,
+        }));
+    }
 
     function handleClick(id) {
         if (typeof onChangeStep !== 'function') return;
         onChangeStep(id);
+        if (typeof fillForm !== 'function') return;
+        fillForm(locationAndPerson);
     }
 
     return (
@@ -14,7 +33,7 @@ function ProvideDataFormStepC({text, onChangeStep}) {
             <p>Krok 3/4</p>
             <label>
                 <h1>Lokalizacja:</h1>
-                <select>
+                <select name="location" value={locationAndPerson.location} onChange={handleChange}>
                     <option value="Poznan">Poznań</option>
                     <option value="Warszawa">Warszawa</option>
                     <option value="Krakow">Kraków</option>
@@ -23,14 +42,19 @@ function ProvideDataFormStepC({text, onChangeStep}) {
                 </select>
             </label>
             <p>Komu chcesz pomóc?</p>
-            <div>dzieciom</div>
-            <div>samotnym matkom</div>
-            <div>bezdomnym</div>
-            <div>niepełnosprawnym</div>
-            <div>osobom starszym</div>
+            <div onClick={() => handleChangePerson("kids")}>dzieciom</div>
+            <div onClick={() => handleChangePerson("mothers")}>samotnym matkom</div>
+            <div onClick={() => handleChangePerson("homeless")}>bezdomnym</div>
+            <div onClick={() => handleChangePerson("disabled")}>niepełnosprawnym</div>
+            <div onClick={() => handleChangePerson("elderly")}>osobom starszym</div>
             <label>
                 Wpisz nazwę konkretnej organizacji (opcjonalnie)
-                <input type="text" name="name" />
+                <input
+                    type="text"
+                    name="organization"
+                    value={locationAndPerson.organization}
+                    onChange={handleChange}
+                />
             </label>
             <div
                 onClick={() => handleClick(1)}
