@@ -8,7 +8,7 @@ function ProvideDataFormStepC({text, fillForm, onChangeStep}) {
 
     function handleChangePerson(person) {
         let tempData = {...locationAndPerson};
-        tempData.person = person;
+        tempData.person = tempData.person + " " + person;
         setLocationAndPerson(tempData);
     }
 
@@ -42,11 +42,11 @@ function ProvideDataFormStepC({text, fillForm, onChangeStep}) {
                 </select>
             </label>
             <p>Komu chcesz pomóc?</p>
-            <div onClick={() => handleChangePerson("kids")}>dzieciom</div>
-            <div onClick={() => handleChangePerson("mothers")}>samotnym matkom</div>
-            <div onClick={() => handleChangePerson("homeless")}>bezdomnym</div>
-            <div onClick={() => handleChangePerson("disabled")}>niepełnosprawnym</div>
-            <div onClick={() => handleChangePerson("elderly")}>osobom starszym</div>
+            <div onClick={() => handleChangePerson("dzieciom")}>dzieciom</div>
+            <div onClick={() => handleChangePerson("samotnym matkom")}>samotnym matkom</div>
+            <div onClick={() => handleChangePerson("bezdomnym")}>bezdomnym</div>
+            <div onClick={() => handleChangePerson("niepełnosprawnym")}>niepełnosprawnym</div>
+            <div onClick={() => handleChangePerson("osobom starszym")}>osobom starszym</div>
             <label>
                 Wpisz nazwę konkretnej organizacji (opcjonalnie)
                 <input

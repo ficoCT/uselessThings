@@ -1,4 +1,6 @@
-function ConfirmForm({text, onChangeStep}) {
+import thingsList  from "../database/things.js";
+
+function ConfirmForm({donate, onChangeStep}) {
 
     function handleClick(id) {
         if (typeof onChangeStep !== 'function') return;
@@ -9,21 +11,22 @@ function ConfirmForm({text, onChangeStep}) {
         <div>
             <h1>Podsumowanie Twojej darowizny</h1>
             <div>
-                Oddajesz:
+                Oddajesz: {donate.trashBags} worki {', '} {donate.things} {', '} {donate.peopleAndOrganization.person}
+                Dla lokalizacji: {donate.peopleAndOrganization.location}
             </div>
             <div>
                 <div>
                     Adres odbioru:
-                    <span>Ulica</span>
-                    <span>Miasto</span>
-                    <span>Kod pocztowy</span>
-                    <span>Numer telefonu</span>
+                    <span>Ulica {donate.delivery.street}</span>
+                    <span>Miasto {donate.delivery.city}</span>
+                    <span>Kod pocztowy {donate.delivery.zipCode}</span>
+                    <span>Numer telefonu {donate.delivery.phoneNumber}</span>
                 </div>
                 <div>
                     Termin odbioru:
-                    <span>Data</span>
-                    <span>Godzina</span>
-                    <span>Uwagi dla kuriera</span>
+                    <span>Data {donate.delivery.date}</span>
+                    <span>Godzina {donate.delivery.hour}</span>
+                    <span>Uwagi dla kuriera {donate.delivery.remarks}</span>
                 </div>
             </div>
             <div
@@ -31,6 +34,12 @@ function ConfirmForm({text, onChangeStep}) {
                 className=""
             >
                 Wstecz
+            </div>
+            <div
+                onClick={() => handleClick(5)}
+                className=""
+            >
+                Potwierdzam
             </div>
         </div>
     );

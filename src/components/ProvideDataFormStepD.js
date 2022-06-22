@@ -26,7 +26,6 @@ function ProvideDataFormStepD({text, fillForm, onChangeStep}) {
         if (typeof onChangeStep !== 'function') return;
         onChangeStep(id);
         if (typeof fillForm !== 'function') return;
-        console.log("delivery", delivery);
         fillForm(delivery);
     }
 
