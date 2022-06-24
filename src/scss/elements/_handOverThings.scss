@@ -20,4 +20,22 @@
       }
     }
   }
+  &__form {
+    position: relative;
+    height: 850px;
+
+    &__field {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__image {
+      width: 100%;
+      height: auto;
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      right: 0;
+    }
+  }
 }

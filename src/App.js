@@ -9,15 +9,15 @@ import HandOverThings from "./components/HandOverThings";
 function App() {
   return (
           <React.StrictMode>
-              <BrowserRouter>
-                  <Routes>
-                      <Route path="/" element={<Home />} />
-                      <Route path="login" element={<Login />} />
-                      <Route path="register" element={<Register />} />
-                      <Route path="logout" element={<Logout />} />
-                      <Route path="hand-over-things" element={<HandOverThings />} />
-                  </Routes>
-              </BrowserRouter>
+                  <BrowserRouter>
+                      <Routes>
+                          <Route path="/" element={<Home />} />
+                          <Route path="login" element={<Login />} />
+                          <Route path="register" element={<Register />} />
+                          <Route path="logout" element={<Logout />} />
+                          <Route path="hand-over-things" element={<HandOverThings />} />
+                      </Routes>
+                  </BrowserRouter>
           </React.StrictMode>
   );
 }
