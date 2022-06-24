@@ -1,8 +1,15 @@
+import MobileMainActions from "./MobileMainActions";
+import MobileMainWho from "./MobileMainWho";
+import MobileMainSteps from "./MobileMainSteps";
+import MobileMainGood from "./MobileMainGood";
 
 function MobileMain() {
   return (
     <div className="mobileHome__main">
-        MobileMain
+        <MobileMainActions />
+        <MobileMainSteps />
+        <MobileMainWho />
+        <MobileMainGood />
     </div>
   );
 }

@@ -1,9 +1,11 @@
-import Icon1 from "../assets/Icon-1.svg";
+import Image from "../assets/MobileClothes.png";
 
 function MobileHeader() {
   return (
     <div className="mobileHome__header">
-        <img src={Icon1} alt="Icon" className="whatIsItAbout__icon"/>
+        <div className="mobileHome__header__circle">
+            <img src={Image} alt="Clothes" className="mobileHome__header__circle__image"/>
+        </div>
     </div>
   );
 }
