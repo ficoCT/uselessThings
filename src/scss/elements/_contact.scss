@@ -1,0 +1,95 @@
+.contact__container {
+  display: flex;
+  justify-content: flex-end;
+
+  &__image {
+    width: 1300px;
+    height: 760px;
+    opacity: 0.2;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+  }
+
+  &__text {
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   margin-right: 70px;
+
+   h2 {
+     margin-top: 100px;
+     font-size: 30px;
+   }
+
+   &__form {
+     display: flex;
+     flex-direction: column;
+     margin-top: 30px;
+     font-size: 15px;
+
+     &__labels {
+       display: flex;
+
+       &__single {
+         display: flex;
+         flex-direction: column;
+         text-align: start;
+         margin: 10px;
+
+         &__input {
+           margin-top: 5px;
+           border: transparent;
+           border-bottom: 1px solid $color-dark-grey;
+           color: $color-grey;
+           font-size: 15px;
+         }
+
+         &__textarea {
+           margin-top: 5px;
+           border: transparent;
+           border-bottom: 1px solid $color-dark-grey;
+           color: $color-grey;
+           font-size: 15px;
+
+           &__button {
+             margin-top: 15px;
+             padding: 5px;
+             width: 90px;
+             text-align: center;
+             align-self: end;
+           }
+         }
+
+         &__error-message {
+           color: red;
+           font-size: 12px;
+         }
+       }
+     }
+   }
+  }
+}
+
+.contact__container__bottom {
+  margin-top: 270px;
+  display: flex;
+  justify-content: flex-end;
+
+  span {
+    align-self: center;
+    width: 50%;
+  }
+
+  img {
+    margin-left: 10px;
+  }
+}
+
+.success {
+  font-weight: bold;
+  color: $color-green;
+  margin-top: 30px;
+}
+
+

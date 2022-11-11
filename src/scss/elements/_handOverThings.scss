@@ -1,0 +1,41 @@
+.handOverThings {
+
+  &__image{
+    width: 984px;
+    height: 691px;
+    position: relative;
+    left: -270px;
+  }
+
+  &__important {
+    background-color: $color-yellow;
+
+    &__text {
+      padding: 30px;
+
+      &__title {
+        font-size: 25px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+    }
+  }
+  &__form {
+    position: relative;
+    height: 850px;
+
+    &__field {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__image {
+      width: 100%;
+      height: auto;
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      right: 0;
+    }
+  }
+}

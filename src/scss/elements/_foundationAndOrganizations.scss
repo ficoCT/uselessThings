@@ -1,0 +1,72 @@
+.foundationAndOrganizations {
+
+  &__links {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    justify-content: center;
+
+    &__single {
+      margin: 50px;
+      height: 100px;
+      width: 200px;
+      padding: 30px;
+    }
+  }
+
+}
+
+h1 {
+  text-align: center;
+  font-size: 28px;
+  margin-top: 30px;
+}
+
+.organizationalUnits__description {
+  margin-bottom: 40px;
+  width: 670px;
+  text-align: center;
+}
+
+.organizationalUnit__single {
+  display: flex;
+  justify-content: space-between;
+
+  &__unit {
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    &__name {
+      font-size: 22px;
+      margin-bottom: 5px;
+    }
+
+    &__description {
+      font-size: 13px;
+    }
+  }
+
+  &__things {
+    font-size: 13px;
+    display: table;
+    &__text {
+      display: table-cell;
+      text-align: center;
+      vertical-align: middle;
+    }
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+
+  &__single{
+    margin: 15px;
+    padding: 10px;
+    cursor: pointer;
+  }
+}
+

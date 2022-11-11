@@ -1,9 +1,20 @@
+import HomeHeader from "./HomeHeader";
+import WhatIsItAbout from "./WhatIsItAbout";
+import AboutUs from "./AboutUs";
+import FoundationAndOrganizations from "./FoundationAndOrganizations";
+import Contact from "./Contact";
+import HomeThreeColumns from "./HomeThreeColumns";
 
 function Home() {
   return (
-    <div >
-      Home
-    </div>
+    <>
+      <HomeHeader />  < br/>
+      <HomeThreeColumns />  < br/>
+      <WhatIsItAbout />  < br/>
+      <AboutUs />  < br/>
+      <FoundationAndOrganizations />  < br/>
+      <Contact />  < br/>
+    </>
   );
 }
 

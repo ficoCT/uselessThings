@@ -1,0 +1,48 @@
+.mobileHome {
+  display: flex;
+  flex-direction: column;
+
+  &__circle {
+    width:100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: $color-mobile-white;
+  }
+
+  &__button {
+    width:100px;
+    height: 100px;
+    background-color: $color-mobile-blue;
+  }
+
+  &__header {
+    background-color: $color-mobile-blue;
+    margin-bottom: 20px;
+
+    &__circle {
+      width:100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: $color-mobile-white;
+      text-align: center;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      margin-left: 10px;
+
+      &__image {
+        margin-top: 15px;
+        width: 70px;
+        height: 70px;
+      }
+    }
+  }
+
+  &__main {
+    background-color: $color-mobile-grey;
+  }
+
+  &__footer {
+    background-color: $color-mobile-blue;
+  }
+}
+

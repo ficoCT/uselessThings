@@ -1,0 +1,45 @@
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__navbar {
+    align-self: end;
+  }
+
+  &__title {
+    font-size: 35px;
+  }
+
+  &__input {
+    background-color: $color-light-grey;
+    padding: 50px;
+    margin-top: 30px;
+    input {
+      background-color: $color-light-grey;
+      font-size: 18px;
+    }
+  }
+
+  &__account {
+    display: flex;
+    margin-top: 30px;
+
+    &__register {
+      padding: 12px;
+      margin-right: 90px;
+      text-decoration: none;
+      color: black;
+      width: 150px;
+      text-align: center;
+    }
+
+    &__login {
+      padding: 12px;
+      margin-left: 90px;
+      color: black;
+      width: 150px;
+      text-align: center;
+    }
+  }
+}
